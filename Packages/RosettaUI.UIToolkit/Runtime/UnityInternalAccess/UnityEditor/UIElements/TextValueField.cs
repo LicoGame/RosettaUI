@@ -125,7 +125,7 @@ namespace RosettaUI.UIToolkit.UnityInternalAccess
       public void StartDragging()
       {
         this.isDragging = true;
-        this.SelectNone();
+        this.textSelection.SelectNone();
         this.MarkDirtyRepaint();
       }
 
@@ -134,7 +134,7 @@ namespace RosettaUI.UIToolkit.UnityInternalAccess
         if (this.textValueFieldParent.isDelayed)
           this.UpdateValueFromText();
         this.isDragging = false;
-        this.SelectAll();
+        this.textSelection.SelectAll();
         this.MarkDirtyRepaint();
       }
 

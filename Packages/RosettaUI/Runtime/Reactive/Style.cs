@@ -16,6 +16,7 @@ namespace RosettaUI
         float? _maxHeight;
         Color? _color;
         Color? _backgroundColor;
+        float? _flexGrow;
 
         public float? Width
         {
@@ -62,6 +63,12 @@ namespace RosettaUI
         {
             get => _backgroundColor;
             set => SetValue(ref _backgroundColor, value);
+        }
+        
+        public float? FlexGrow
+        {
+            get => _flexGrow;
+            set => SetValue(ref _flexGrow, value);
         }
         
         #endregion

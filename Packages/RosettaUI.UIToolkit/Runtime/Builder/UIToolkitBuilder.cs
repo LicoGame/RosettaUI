@@ -186,7 +186,7 @@ namespace RosettaUI.UIToolkit.Builder
             }
             else
             {
-                veStyle.flexGrow = StyleKeyword.Null;
+                veStyle.flexGrow = ToStyleFloat(style.FlexGrow);
                 veStyle.flexShrink = StyleKeyword.Null;
             }
             
@@ -195,6 +195,9 @@ namespace RosettaUI.UIToolkit.Builder
             
             static StyleColor ToStyleColor(Color? nullable)
                 => nullable ?? (StyleColor)StyleKeyword.Null;
+            
+            static StyleFloat ToStyleFloat(float? nullable)
+                => nullable ?? (StyleFloat)StyleKeyword.Null; 
         }
 
         protected override void OnDetachView(Element element, bool destroyView)

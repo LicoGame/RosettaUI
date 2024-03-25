@@ -28,14 +28,14 @@ namespace RosettaUI
         
         #region Button
 
-        public static ButtonElement Button(LabelElement label, Action onClick = null)
+        public static ButtonElement Button(LabelElement label, Action onClick = null, bool expand = false)
         {
-            return new ButtonElement(label?.getter, onClick);
+            return new ButtonElement(label?.getter, onClick, expand);
         }
 
-        public static ButtonElement Button(LabelElement label, Action<ButtonElement> onClick)
+        public static ButtonElement Button(LabelElement label, Action<ButtonElement> onClick, bool expand = false)
         {
-            var button = Button(label);
+            var button = Button(label, expand: expand);
             button.onClick += () => onClick(button);
 
             return button;

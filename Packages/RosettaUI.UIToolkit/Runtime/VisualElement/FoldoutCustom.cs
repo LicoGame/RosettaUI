@@ -41,7 +41,7 @@ namespace RosettaUI.UIToolkit
                 using var requestResizeWindowEvent = RequestResizeWindowEvent.GetPooled();
                 requestResizeWindowEvent.target = contentContainer;
                 SendEvent(requestResizeWindowEvent);
-            });
+            }, TrickleDown.TrickleDown);
         }
     }
 }

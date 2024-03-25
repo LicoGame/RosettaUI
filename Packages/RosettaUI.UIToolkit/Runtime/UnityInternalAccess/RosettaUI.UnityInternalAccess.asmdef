@@ -1,5 +1,5 @@
 {
-    "name": "Unity.UIElements",
+    "name": "Unity.UIElements.Tests",
     "rootNamespace": "",
     "references": [
         "GUID:2b1b0416520827b409049c7e4d90bcc1"
